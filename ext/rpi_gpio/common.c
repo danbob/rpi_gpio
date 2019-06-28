@@ -1,8 +1,4 @@
 /*
-Original code by Ben Croston modified for Ruby by Nick Lowery
-(github.com/clockvapor)
-Copyright (c) 2014-2016 Nick Lowery
-
 Copyright (c) 2013-2014 Ben Croston
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -67,10 +63,8 @@ int get_gpio_number(int channel, unsigned int *gpio)
 
     // check channel number is in range
     if ( (gpio_mode == BCM && (channel < 0 || channel > 53))
-      || (gpio_mode == BOARD && (channel < 1 || channel > 26) && 
-          rpiinfo.p1_revision != 3)
-      || (gpio_mode == BOARD && (channel < 1 || channel > 40) &&
-          rpiinfo.p1_revision == 3))
+      || (gpio_mode == BOARD && (channel < 1 || channel > 26) && rpiinfo.p1_revision != 3)
+      || (gpio_mode == BOARD && (channel < 1 || channel > 40) && rpiinfo.p1_revision == 3) )
     {
         rb_raise(rb_eArgError, "the channel sent is invalid on a Raspberry Pi");
         return 4;

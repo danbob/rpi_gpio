@@ -1,4 +1,4 @@
-# rpi_gpio v0.3.3
+# rpi_gpio v0.6.5
 
 Ruby conversion of [RPi.GPIO Python module](https://pypi.python.org/pypi/RPi.GPIO)
 
@@ -17,7 +17,7 @@ I aimed to make the gem's usage exactly the same as its Python counterpart -- on
 
 #### Download the gem
 
-The easiest way to download the gem is to use [Bundler](http://bundler.io/) with a Gemfile. In your Gemfile, include the line 
+The easiest way to download the gem is to use [Bundler](http://bundler.io/) with a Gemfile. In your Gemfile, include the line
 ```ruby
 gem 'rpi_gpio'
 ```
@@ -142,4 +142,3 @@ Original Python code by Ben Croston modified for Ruby by Nick Lowery
 Copyright (c) 2014-2015 [Nick Lowery](https://github.com/ClockVapor)
 
 View LICENSE for full license.
-

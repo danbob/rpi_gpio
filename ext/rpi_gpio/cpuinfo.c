@@ -1,9 +1,5 @@
 /*
-Original code by Ben Croston modified for Ruby by Nick Lowery
-(github.com/clockvapor)
-Copyright (c) 2014-2016 Nick Lowery
-
-Copyright (c) 2013-2016 Ben Croston
+Copyright (c) 2012-2016 Ben Croston
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -41,8 +37,7 @@ int get_rpi_info(rpi_info *info)
 
    if ((fp = fopen("/proc/cpuinfo", "r")) == NULL)
       return -1;
-   while(!feof(fp)) {
-      fgets(buffer, sizeof(buffer), fp);
+   while(!feof(fp) && fgets(buffer, sizeof(buffer), fp)) {
       sscanf(buffer, "Hardware	: %s", hardware);
       if (strcmp(hardware, "BCM2708") == 0 ||
           strcmp(hardware, "BCM2709") == 0 ||
